@@ -1,0 +1,20 @@
+{
+  "name": "HeavyNewsScaper",
+  "version": "1.0.0",
+  "description": "A web app that lets users view and leave comments on the latest news",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jester2255/HeavyNewsScaper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jester2255/HeavyNewsScaper/issues"
+  },
+  "homepage": "https://github.com/jester2255/HeavyNewsScaper#readme"
+}
