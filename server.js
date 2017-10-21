@@ -29,8 +29,7 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-//mongoose.connect
-(var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper");
+mongoose.connect(var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper");
 var db = mongoose.connection;
 
 // Show any mongoose errors
