@@ -27,9 +27,9 @@ app.use(bodyParser.urlencoded({
 
 // Make public a static dir
 app.use(express.static("public"));
-var MONGODB_URI
+var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper"
 // Database configuration with mongoose
-mongoose.connect(MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper");
+mongoose.connect(MONGODB_URI);
 var db = mongoose.connection;
 
 // Show any mongoose errors
