@@ -14,9 +14,9 @@ var request = require("request");
 var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
 mongoose.Promise = Promise;
-var MONGODB_URI = mongoose.createConnection(process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper", {
-  useMongoClient: true,
-});
+//var MONGODB_URI = mongoose.createConnection(process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper", {
+  //useMongoClient: true,
+//});
 
 // Initialize Express
 var app = express();
