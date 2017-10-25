@@ -26,9 +26,9 @@ app.use(bodyParser.urlencoded({
 
 // Make public a static dir
 app.use(express.static("public"));
-//var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper"
+var MONGODB_URI = process.env.MONGODB_URI //||"mongodb://localhost/heavyNewsScraper"
 // Database configuration with mongoose
-mongoose.connect('mongodb://heroku_mv6vh52scj87i23lqdu2d719400u@ds121664.mlab.com:12665/heroku_mv67rl7f');
+mongoose.connect(MONGODB_URI);
 var db = mongoose.connection;
 
 // Show any mongoose errors
