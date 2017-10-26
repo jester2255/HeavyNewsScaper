@@ -13,7 +13,7 @@ var Article = require("./models/Article.js");
 var request = require("request");
 var cheerio = require("cheerio");
 // Set mongoose to leverage built in JavaScript ES6 Promises
-mongoose.Promise = Promise;
+mongoose.Promise = global.Promise;
 
 // Initialize Express
 var app = express();
@@ -26,9 +26,9 @@ app.use(bodyParser.urlencoded({
 
 // Make public a static dir
 app.use(express.static("public"));
-var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/heavyNewsScraper"
+var MONGODB_URI = process.env.MONGODB_URI //||"mongodb://localhost/heavyNewsScraper"
 // Database configuration with mongoose
-mongodb.MongoClient.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI);
 var db = mongoose.connection;
 
 // Show any mongoose errors
