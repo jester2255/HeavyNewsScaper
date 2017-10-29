@@ -26,7 +26,7 @@ app.use(bodyParser.urlencoded({
 
 // Make public a static dir
 app.use(express.static("public"));
-var MONGODB_URI = process.env.MONGODB_URI //||"mongodb://localhost/heavyNewsScraper"
+var MONGODB_URI = process.env.MONGODB_URI //|| "mongodb://localhost/heavyNewsScraper"
 // Database configuration with mongoose
 mongoose.connect(MONGODB_URI);
 var db = mongoose.connection;
@@ -81,7 +81,7 @@ app.get("/scrape", function(req, res) {
   });
   // Tell the browser that we finished scraping the text
   //res.send("Scrape Complete");
-  res.send(MONGODB_URI +" here is tha variable " + process.env.MONGODB_URI);
+  res.send(MONGODB_URI +" <-- Here is tha variable " + process.env.MONGODB_URI + " <--Here is the process environment");
   //res.send(process.env.MONGODB_URI)
 });
 
