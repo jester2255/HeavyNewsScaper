@@ -81,7 +81,7 @@ app.get("/scrape", function(req, res) {
   });
   // Tell the browser that we finished scraping the text
   //res.send("Scrape Complete");
-  res.send(MONGODB_URI +" <-- Here is tha variable " + process.env.MONGODB_URI + " <--Here is the process environment");
+  res.send("Scrape successful");
   //res.send(process.env.MONGODB_URI)
 });
 
